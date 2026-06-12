@@ -1,6 +1,6 @@
 # The Felys Programming Language
 
-Felys is a dependency-free interpreted programming language written in Rust, featuring its own compiler and runtime. Feel free to try it out in the online [playground](https://felys.dev/en/compiler). Please note, however, that the language is currently in a fragile state following a major reconstruction and requires project-level refactoring to improve code quality.
+Felys is a dependency-free interpreted programming language written in Rust, featuring its own compiler and runtime. Feel free to try it out using the online [playground](https://felys.dev/en/compiler) and read the [blog](https://book.felys.dev/purely-to-mention-elysia.html). Please note, however, that the compiler is in a fragile state and requires project-level refactoring to improve code quality.
 
 ## References
 
