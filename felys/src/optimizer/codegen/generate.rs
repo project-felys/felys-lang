@@ -1,5 +1,7 @@
 use crate::ast::Block;
-use crate::frontend::cfg::function::{Const, Function, Instruction, Label, Pointer, Terminator, Var};
+use crate::frontend::cfg::function::{
+    Const, Function, Instruction, Label, Pointer, Terminator, Var,
+};
 use crate::frontend::group::Group;
 use crate::frontend::namespace::Namespace;
 use crate::frontend::stage::II;

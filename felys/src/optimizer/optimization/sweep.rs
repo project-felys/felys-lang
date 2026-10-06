@@ -1,4 +1,6 @@
-use crate::frontend::cfg::function::{Fragment, Function, Instruction, Label, Phi, Terminator, Var};
+use crate::frontend::cfg::function::{
+    Fragment, Function, Instruction, Label, Phi, Terminator, Var,
+};
 use std::collections::{HashMap, HashSet, VecDeque};
 
 #[derive(Default)]

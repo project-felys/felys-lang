@@ -8,13 +8,13 @@ use std::path::{Path, PathBuf};
 
 impl Root {
     pub fn write(&self, base: &Path, name: &str) {
+        write(base, &format!("{name}.rs"), &self.module);
         let mut path = PathBuf::from(base);
         path.push(name);
         if !fs::exists(&path).unwrap() {
             fs::create_dir(&path).unwrap();
         }
 
-        write(&path, "mod.rs", &self.module);
         write(&path, "core.rs", &self.core);
         let mut helper = PathBuf::from(&path);
         helper.push("helper.rs");
@@ -30,13 +30,13 @@ impl Root {
 
 impl Common {
     fn write(&self, base: &Path, name: &str) {
+        write(base, &format!("{name}.rs"), &self.module);
         let mut path = PathBuf::from(base);
         path.push(name);
         if !fs::exists(&path).unwrap() {
             fs::create_dir(&path).unwrap();
         }
 
-        write(&path, "mod.rs", &self.module);
         write(&path, "interner.rs", &self.interner);
         write(&path, "memoize.rs", &self.memoize);
         write(&path, "packrat.rs", &self.packrat);

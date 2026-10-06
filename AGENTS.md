@@ -20,7 +20,7 @@ cargo run --bin philia093 grammar/felys.peg felys/src/       # → felys/src/phi
 
 Each `.peg` file's `{ ... }` header block becomes the `use` imports in generated `core.rs` and `common/memoize.rs`. **If you move/rename a module referenced by generated code, update the grammar header AND regenerate.**
 
-The generator overwrites `core.rs`, `mod.rs`, and all of `common/`. It does **not** overwrite `helper.rs` (hand-written, lives inside the generated directory).
+The generator writes the 2018-style module layout (no `mod.rs`): it overwrites the module declaration file `philia093.rs` (sibling of the generated directory), `core.rs`, `common.rs`, and all of `common/`. It does **not** overwrite `helper.rs` (hand-written, lives inside the generated directory).
 
 # Testing
 Integration tests in `felys/tests/` use an `exec()` helper (`tests/utils/mod.rs`) that compiles Felys source, then validates output across **4 optimization levels** (0, 1, 2, `usize::MAX`) and a **dump→load roundtrip** — 8 executions per test case.
